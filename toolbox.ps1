@@ -67,7 +67,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
     $script = if ($PSCommandPath) {
         "& { & `'$($PSCommandPath)`' $($argList -join ' ') }"
     } else {
-        "&([ScriptBlock]::Create((irm https://raw.githubusercontent.com/Wistrow/wintoolbox/refs/heads/main/winutil_1.ps1?token=GHSAT0AAAAAADC2Q3Z7LPB4GFECZVJHNGDO2AOAUAA))) $($argList -join ' ')"
+        "&([ScriptBlock]::Create((irm https://raw.githubusercontent.com/Wistrow/wintoolbox/refs/heads/main/toolbox.ps1?token=GHSAT0AAAAAADC2Q3Z64M2GBVRCCBBGIFLI2AOAWSA))) $($argList -join ' ')"
     }
 
     $powershellCmd = if (Get-Command pwsh -ErrorAction SilentlyContinue) { "pwsh" } else { "powershell" }
